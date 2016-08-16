@@ -10,12 +10,19 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_droid</sprite>
+    <sprite>sprites\spr_droid_immortal</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_asteroid</sprite>
     <sprite>sprites\spr_asteroid_s</sprite>
+    <sprite>sprites\spr_test</sprite>
+    <sprite>sprites\spr_dead_player</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fnt_small</font>
+    <font>fonts\fnt_large</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_bullet</object>
@@ -23,6 +30,9 @@
     <object>objects\obj_asteroid_s</object>
     <object>objects\obj_score</object>
     <object>objects\obj_spawner</object>
+    <object>objects\obj_test</object>
+    <object>objects\obj_dead_player</object>
+    <object>objects\obj_game_over</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_gameplay</room>
