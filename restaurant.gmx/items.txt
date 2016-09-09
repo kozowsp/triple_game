@@ -1,0 +1,4 @@
+name;refcode;sprite;moveable;destroyable;mergeable;cleanable;complexity
+bagietka;BAQ;spr_baguette.sprite.gmx;1;1;1;0;0
+banan;BAN;spr_banana.sprite.gmx;1;1;1;0;0
+lody bananowe;BIC;spr_banana_ice_cream.sprite.gmx;1;1;1;0;1

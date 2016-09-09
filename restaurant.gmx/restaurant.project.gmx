@@ -3,6 +3,677 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="39" name="datafiles">
+    <datafile>
+      <name>items.txt</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>items.txt</filename>
+    </datafile>
+    <datafiles number="39" name="Images">
+      <datafiles number="39" name="Items">
+        <datafile>
+          <name>it_cutlet.png</name>
+          <exists>-1</exists>
+          <size>21733</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_cutlet.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_baguette.png</name>
+          <exists>-1</exists>
+          <size>13725</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_baguette.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_fruit_goblet.png</name>
+          <exists>-1</exists>
+          <size>25552</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_fruit_goblet.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_milk.png</name>
+          <exists>-1</exists>
+          <size>13552</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_milk.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_ketchup.png</name>
+          <exists>-1</exists>
+          <size>15380</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_ketchup.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_big_chips_with_ketchup.png</name>
+          <exists>-1</exists>
+          <size>15374</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_big_chips_with_ketchup.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_tomatoe.png</name>
+          <exists>-1</exists>
+          <size>15230</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_tomatoe.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_strawberry_ice_cream.png</name>
+          <exists>-1</exists>
+          <size>15509</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_strawberry_ice_cream.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_vege_shashlik.png</name>
+          <exists>-1</exists>
+          <size>11456</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_vege_shashlik.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_vegetables_in_tempura.png</name>
+          <exists>-1</exists>
+          <size>28704</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_vegetables_in_tempura.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_rainbow_shake.png</name>
+          <exists>-1</exists>
+          <size>14790</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_rainbow_shake.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_big_chips.png</name>
+          <exists>-1</exists>
+          <size>15700</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_big_chips.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_chefs_special.png</name>
+          <exists>-1</exists>
+          <size>27276</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_chefs_special.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_banana_shake.png</name>
+          <exists>-1</exists>
+          <size>19827</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_banana_shake.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_hamburger.png</name>
+          <exists>-1</exists>
+          <size>11216</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_hamburger.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_strawberry.png</name>
+          <exists>-1</exists>
+          <size>20405</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_strawberry.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_banana_ice_cream.png</name>
+          <exists>-1</exists>
+          <size>20587</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_banana_ice_cream.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_blueberry_shake.png</name>
+          <exists>-1</exists>
+          <size>18908</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_blueberry_shake.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_blueberry.png</name>
+          <exists>-1</exists>
+          <size>25286</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_blueberry.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_chips.png</name>
+          <exists>-1</exists>
+          <size>8183</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_chips.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_potatoes.png</name>
+          <exists>-1</exists>
+          <size>16770</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_potatoes.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_blueberry_ice_cream.png</name>
+          <exists>-1</exists>
+          <size>22295</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_blueberry_ice_cream.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_lettuce.png</name>
+          <exists>-1</exists>
+          <size>39449</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_lettuce.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_strawberry_shake.png</name>
+          <exists>-1</exists>
+          <size>10545</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_strawberry_shake.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_fruit_salad.png</name>
+          <exists>-1</exists>
+          <size>35764</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_fruit_salad.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_bread.png</name>
+          <exists>-1</exists>
+          <size>18136</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_bread.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_chips_with_ketchup.png</name>
+          <exists>-1</exists>
+          <size>8696</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_chips_with_ketchup.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_potato_pancakes.png</name>
+          <exists>-1</exists>
+          <size>21752</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_potato_pancakes.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_flour.png</name>
+          <exists>-1</exists>
+          <size>27135</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_flour.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_long_dog.png</name>
+          <exists>-1</exists>
+          <size>16275</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_long_dog.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_pudding.png</name>
+          <exists>-1</exists>
+          <size>18592</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_pudding.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_hot_dog.png</name>
+          <exists>-1</exists>
+          <size>15428</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_hot_dog.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_banana.png</name>
+          <exists>-1</exists>
+          <size>10612</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_banana.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_vegetable_salad.png</name>
+          <exists>-1</exists>
+          <size>22609</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_vegetable_salad.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_pancakes.png</name>
+          <exists>-1</exists>
+          <size>26515</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_pancakes.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_meat.png</name>
+          <exists>-1</exists>
+          <size>16168</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_meat.png</filename>
+        </datafile>
+        <datafile>
+          <name>it_steak.png</name>
+          <exists>-1</exists>
+          <size>18286</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_steak.png</filename>
+        </datafile>
+      </datafiles>
+      <datafiles number="39" name="Helpers">
+        <datafile>
+          <name>it_covered.png</name>
+          <exists>-1</exists>
+          <size>591</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>it_covered.png</filename>
+        </datafile>
+      </datafiles>
+    </datafiles>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -18,6 +689,7 @@
       <sprite>sprites\spr_blueberry</sprite>
       <sprite>sprites\spr_blueberry_ice_cream</sprite>
       <sprite>sprites\spr_blueberry_shake</sprite>
+      <sprite>sprites\spr_covered</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -25,20 +697,41 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_escape.gml</script>
-    <script>scripts\script1.gml</script>
+    <script>scripts\scr_init_gameplay_room.gml</script>
+    <scripts name="Utilities">
+      <script>scripts\scr_escape.gml</script>
+      <script>scripts\scr_slice.gml</script>
+      <script>scripts\scr_load_sprite.gml</script>
+    </scripts>
+    <scripts name="Board">
+      <script>scripts\scr_init_board.gml</script>
+      <script>scripts\scr_highlight_board_cell.gml</script>
+    </scripts>
+    <scripts name="Queue">
+      <script>scripts\scr_init_queue.gml</script>
+    </scripts>
+    <scripts name="Orders">
+      <script>scripts\scr_init_orders.gml</script>
+    </scripts>
+    <scripts name="Items">
+      <script>scripts\scr_parse_items.gml</script>
+      <script>scripts\scr_add_item.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_main_menu_button</object>
     <object>objects\obj_table</object>
     <object>objects\obj_escape</object>
-    <object>objects\obj_table_item</object>
+    <object>objects\obj_item</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_gameplay</room>
     <room>rooms\rm_settings</room>
   </rooms>
+  <constants number="1">
+    <constant name="tr_gameplay">0</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
