@@ -1,23 +1,25 @@
 // Populates the queue with the ingredients.
 
-var items_number;
-
-if(argument_count != 1 or !is_real(argument0) or argument0 < 1)
-{
-    return noone;
-}
-
-items_number = argument0;
-
 with(obj_queue)
 {
-    desired_ingredient_width = width / items_number;
-    for(var i = 0; i < items_number; ++i)
-    {        
+    desired_ingredient_width = width / slots_number;
+    for(var i = 0; i < slots_number; ++i)
+    {
+        if(slots[i] != noone)
+        {
+            show_debug_message("Slot " + string(i) + " does not equal noone. Skipping...");
+            continue;
+        }
+        
+        show_debug_message("Slot " + string(i) + " equals noone. Skipping...");        
+        
         var new_ingredient_index = irandom(ds_list_size(global.ingredient_refcodes) - 1);        
         var properties_array = ds_map_find_value(global.ingredient_properties, ds_list_find_value(global.ingredient_refcodes, new_ingredient_index));
         
-        with(instance_create(left_position + i * desired_ingredient_width, top_position, obj_ingredient))
+        var new_ingredient = instance_create(left_position + i * desired_ingredient_width, top_position, obj_ingredient);
+        slots[i] = new_ingredient;
+        
+        with(new_ingredient)
         {
             name = properties_array[OBSTACLE_NAME_INDEX];
             refcode = properties_array[OBSTACLE_REFCODE_INDEX];

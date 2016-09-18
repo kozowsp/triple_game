@@ -30,7 +30,7 @@
 var will_be_on_board = false;
 var new_position_x = noone;
 var new_position_y = noone;
-show_debug_message("Releasing the left button.");
+
 with(obj_table)
 {
     if(highlighted_cell != noone)
@@ -41,7 +41,6 @@ with(obj_table)
         {
             new_position_x = x;
             new_position_y = y;        
-            show_debug_message("highlighted cell's position: " + string(new_position_x) + ", " + string(new_position_y));
             instance_destroy();
         }
     }
@@ -49,9 +48,33 @@ with(obj_table)
 
 if(will_be_on_board == true)
 {
-    show_debug_message("new cell's position: " + string(new_position_x) + ", " + string(new_position_y));
     x = new_position_x;
     y = new_position_y;
+    var item_id = id;
+    
+    if(is_undefined(id))
+    {
+        show_debug_message("Object id is undefined.");
+    }
+    else
+    {
+        show_debug_message("Object id equals " + string(id) + ".");   
+        show_debug_message("Item id equals " + string(item_id) + ".");           
+    }
+    
+    with(obj_queue)
+    {
+        for(var i = 0; i &lt; slots_number; ++i)
+        {
+            show_debug_message("Slot " + string(i) + " equals " + string(slots[i]) + ".");
+            if(slots[i] == item_id)
+            {
+                slots[i] = noone;
+            }
+        }
+    }
+    
+    scr_populate_queue();
 }
 </string>
           </argument>
