@@ -1,0 +1,6 @@
+//name;refcode;sprite;moveable;destroyable;mergeable;cleanable;complexity;width;height
+bagietka;BAQ;it_baguette.png;1;1;1;0;0;1;1
+banan;BAN;it_banana.png;1;1;1;0;0;1;1
+lody bananowe;BIC;it_banana_ice_cream.png;1;1;1;0;1;1;1
+chleb;BREAD;it_bread.png;1;1;1;0;1;1;1
+ziemniaki;POTATOES;it_potatoes.png;1;1;1;0;1;1;1

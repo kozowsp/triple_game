@@ -29,13 +29,18 @@
 
 name = "";
 refcode = "";
-sprite = "";
+sprite_index = 0;
 moveable = true;
 destroyable = true;
 mergeable = true;
 cleanable = false;
 complexity = 0;
 selected = false;
+width = 1;
+height = 1;
+
+previous_center_position_x = undefined;
+previous_center_position_y = undefined;
 </string>
           </argument>
         </arguments>
@@ -66,10 +71,22 @@ selected = false;
 x = mouse_x + mouse_xoffset;
 y = mouse_y + mouse_yoffset;
 
-var center_x = x - sprite_xoffset + sprite_width / 2;
-var center_y = y - sprite_yoffset + sprite_height / 2;
+center_x = x - sprite_xoffset + sprite_width / 2;
+center_y = y - sprite_yoffset + sprite_height / 2;
 
-scr_highlight_board_cell(center_x, center_y);
+if(!is_undefined(previous_center_position_x) and !is_undefined(previous_center_position_y))
+{
+    var squared_position_change = (previous_center_position_x - center_x) * (previous_center_position_x - center_x) + (previous_center_position_y - center_y) * (previous_center_position_y - center_y);
+    var squared_position_change_treshold = 9;
+    
+    if(squared_position_change &gt; squared_position_change_treshold)
+    {
+        scr_highlight_board_cell(center_x, center_y);
+    }
+}
+
+previous_center_position_x = center_x;
+previous_center_position_y = center_y;
 </string>
           </argument>
         </arguments>
@@ -92,7 +109,7 @@ scr_highlight_board_cell(center_x, center_y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>selected = false;
+            <string>// Test.
 </string>
           </argument>
         </arguments>
@@ -115,9 +132,7 @@ scr_highlight_board_cell(center_x, center_y);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>selected = true;    
-mouse_xoffset = x - mouse_x;
-mouse_yoffset = y - mouse_y;
+            <string>// Test.
 </string>
           </argument>
         </arguments>

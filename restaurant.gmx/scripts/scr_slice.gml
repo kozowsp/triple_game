@@ -29,6 +29,8 @@ if(text == "" or string_count(separator, text) == 0)
 }
 
 var substrings = ds_list_create();
+var substrings_array;
+var substrings_array_index = 0;
 var substring = "";
 var i;
 
@@ -41,10 +43,11 @@ for(i = 1; i <= string_length(text); ++i)
     else
     {
         ds_list_add(substrings, substring);
+        substrings_array[substrings_array_index++] = substring;
         substring = "";
     }
 }
 
 ds_list_add(substrings, substring); // last char in the string is the saparator, so after it there is still one empty string
-
-return substrings;
+substrings_array[substrings_array_index] = substring;
+return substrings_array;

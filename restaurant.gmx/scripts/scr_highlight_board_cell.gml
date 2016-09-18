@@ -20,19 +20,28 @@ with(instance_find(obj_table, 0))
     var table_left_position = x - sprite_xoffset;
     var table_top_position = y - sprite_yoffset;
     
-    if(center_x >= table_left_position and center_x <= table_left_position + sprite_width and center_y >= table_top_position and center_y <= table_top_position + sprite_height)
+    var table_position_x = floor(center_x - table_left_position) / floor(cell_width);
+    var table_position_y = floor(center_y - table_top_position) / floor(cell_height);
+        
+    if(center_x >= table_left_position and center_x <= table_left_position + sprite_width and center_y >= table_top_position and center_y <= table_top_position + sprite_height and ds_grid_get(grid, table_position_x, table_position_y) != 1)
     {
-        show_debug_message("the item center is inside the board");
         var new_x = table_left_position + cell_width * int64((center_x - table_left_position) / cell_width);
         var new_y = table_top_position + cell_height * int64((center_y - table_top_position) / cell_height);
-        var inst = instance_create(new_x, new_y, obj_item);
-        with(inst)
+        
+        if(highlighted_cell != noone)
         {
-            sprite_index = scr_load_sprite("Images/Helpers/it_covered.png");        
-            show_debug_message("covered tile sprite index: " + string(sprite_index));
+            with(highlighted_cell)
+            {
+                instance_destroy();
+            }
+        }
 
-            x = new_x;
-            y = new_y;
+        highlighted_cell = instance_create(new_x, new_y, obj_item);        
+                
+        with(highlighted_cell)
+        {
+            sprite_index = scr_load_sprite(images_helpers, "it_covered.png");        
+            depth = obj_table.depth - 1;            
         }
     }
 }

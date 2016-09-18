@@ -1,0 +1,4 @@
+﻿//name;refcode;sprite;moveable;destroyable;mergeable;cleanable;complexity;width;height
+narzędzia;STUFF_SMALL;stuff_small.png;0;0;0;1;0;1;1
+widelec;FORK;stuff_fork.png;0;0;0;1;0;1;1
+dużo narzędzi;STUFF_BIG;stuff_big.png;0;0;0;1;0;2;1

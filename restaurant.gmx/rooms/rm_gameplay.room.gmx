@@ -52,8 +52,6 @@
   </views>
   <instances>
     <instance objName="obj_escape" x="64" y="64" name="inst_2CE6AD71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_table" x="1233" y="527" name="inst_82159DDA" locked="0" code="" scaleX="0.786746978759766" scaleY="0.772833704948425" colour="4294967295" rotation="0"/>
-    <instance objName="obj_item" x="256" y="608" name="inst_31CF7DF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
