@@ -1,35 +1,32 @@
-scr_add_item(100, 100, "baguette", "BAGUE", "Images/Items/it_banana.png", true, true, true, false, 0, 1, 1);
-//baguette;BAGUE;spr_baguette.sprite.gmx;1;1;1;0;0
-//position_x, position_y, name, refcode, sprite, moveable, destroyable, mergeable, cleanable, complexity;
+/// scr_init_queue()
 
-var table_width, table_height, table_left_position, table_right_position, table_bottom_position;
+scr_log("The queue initialization have just started.");
 
-with(obj_table)
+var queue_position_x, queue_position_y;
+
+if(instance_exists(obj_table) and instance_number(obj_table) == 1)
 {
-    table_width = sprite_width;
-    table_height = sprite_height;
-    table_left_position = x - sprite_xoffset;
-    table_right_position = x - sprite_xoffset + sprite_width;
-    table_bottom_position = y - sprite_yoffset + sprite_height;
+    with(obj_table)
+    {
+        queue_position_x = x - sprite_xoffset + sprite_width / 2;
+        queue_position_x = y - sprite_yoffset + sprite_height;
+    }
+}
+else
+{
+    queue_position_x = room_width / 2; 
+    queue_position_y = room_height / 2;
 }
 
 if !(instance_exists(obj_queue) and instance_number(obj_queue) > 0)
 {
-    instance_create(room_width / 2, table_bottom_position, obj_queue);
+    scr_log("The queue does not exist. It will be created...");
+    instance_create(queue_position_x, queue_position_y, obj_queue);
+    scr_log("The queue was successfully created.");
 }
 else
 {
-    var queue = instance_find(obj_queue, 0);
-    queue.x = room_width / 2;
-    queue.y = table_bottom_position;
-    with(queue)
-    {
-        //left_position = x - sprite_xoffset;
-        //top_position = y - sprite_yoffset;
-        //right_position = left_position + sprite_width;
-        //bottom_position = top_position + sprite_height;    
-    }
+    scr_log("The queue have been already created.");
 }
 
-
-
+scr_log("The queue initialization have just finished.");

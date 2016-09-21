@@ -25,22 +25,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>rows = 6;
+            <string>scr_log("The table creation have just started.");
+
+rows = 6;
 cols = 6;
-cell_width = sprite_width / cols;
-cell_height = sprite_height / rows;
+field_width = sprite_width / cols;
+field_height = sprite_height / rows;
 
 left_position = x - sprite_xoffset;
 top_position = y - sprite_yoffset;
 right_position = left_position + sprite_width;
 bottom_position = top_position + sprite_height;
 
-highlighted_cell = noone;
+highlighted_field = noone;
 
 grid = ds_grid_create(cols, rows);
 ds_grid_clear(grid, 0);
 
-if(scr_populate_obstacles(4) == noone)
+if(scr_populate_items(4, global.obstacle_refcodes, global.obstacle_properties, images_obstacles, obj_obstacle) == noone)
 {
     show_debug_message("The obstacles' population failed");
 }
@@ -48,9 +50,8 @@ else
 {
     show_debug_message("The obstacles' population succeeded");
 }
-//global.obstacle_refcodes = ds_list_create();
-//global.obstacle_properties = ds_map_create();
-if(scr_populate_items(4, global.ingredient_refcodes, global.ingredient_properties, images_ingredients) == noone)
+
+if(scr_populate_items(4, global.ingredient_refcodes, global.ingredient_properties, images_ingredients, obj_ingredient) == noone)
 {
     show_debug_message("The ingredients' population failed");
 }
@@ -59,7 +60,7 @@ else
     show_debug_message("The ingredients' population succeeded");
 }
 
-scr_populate_ingredients(4);
+scr_log("The table creation have just finished.");
 </string>
           </argument>
         </arguments>
@@ -88,12 +89,12 @@ draw_set_colour(c_green);
 var i;
 for(i = 1; i &lt; rows; ++i)
 {
-    draw_line(left_position, top_position + cell_height * i, right_position, top_position + cell_height * i);
+    draw_line(left_position, top_position + field_height * i, right_position, top_position + field_height * i);
 }
 
 for(i = 1; i &lt; cols; ++i)
 {
-    draw_line(left_position + cell_width * i, top_position, left_position + cell_width * i, bottom_position);
+    draw_line(left_position + field_width * i, top_position, left_position + field_width * i, bottom_position);
 }
 </string>
           </argument>

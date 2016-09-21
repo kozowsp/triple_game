@@ -813,12 +813,11 @@
       <script>scripts\scr_slice.gml</script>
       <script>scripts\scr_load_sprite.gml</script>
       <script>scripts\scr_images_location.gml</script>
+      <script>scripts\scr_log.gml</script>
     </scripts>
-    <scripts name="Board">
-      <script>scripts\scr_init_board.gml</script>
-      <script>scripts\scr_highlight_board_cell.gml</script>
-      <script>scripts\scr_populate_obstacles.gml</script>
-      <script>scripts\scr_populate_ingredients.gml</script>
+    <scripts name="Table">
+      <script>scripts\scr_init_table.gml</script>
+      <script>scripts\scr_highlight_table_field.gml</script>
       <script>scripts\scr_check_fields_availability.gml</script>
       <script>scripts\scr_populate_items.gml</script>
     </scripts>

@@ -27,17 +27,17 @@
             <kind>1</kind>
             <string>selected = false;
 
-var will_be_on_board = false;
+var will_be_on_table = false;
 var new_position_x = noone;
 var new_position_y = noone;
 
 with(obj_table)
 {
-    if(highlighted_cell != noone)
+    if(highlighted_field != noone)
     {
-        will_be_on_board = true;
+        will_be_on_table = true;
         
-        with(highlighted_cell)
+        with(highlighted_field)
         {
             new_position_x = x;
             new_position_y = y;        
@@ -46,7 +46,7 @@ with(obj_table)
     }
 }
 
-if(will_be_on_board == true)
+if(will_be_on_table == true)
 {
     x = new_position_x;
     y = new_position_y;

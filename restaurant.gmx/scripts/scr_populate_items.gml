@@ -1,11 +1,9 @@
-// Populates the specified number of the board's fields with the obstacles
+/// scr_populate_items(desired_fields_number, items_refcodes, items_properties, images_location)
+// Populates the specified number of the table's fields with the items.
 
-var desired_fields_number, items_refcodes, items_properties, images_location;
+var desired_fields_number, items_refcodes, items_properties, images_location, item_type;
 
-//global.obstacle_refcodes = ds_list_create();
-//global.obstacle_properties = ds_map_create();
-
-if(argument_count != 4 or !is_real(argument0) or argument0 < 1 or !ds_exists(argument1, ds_type_list) or ds_list_empty(argument1) or !ds_exists(argument2, ds_type_map) or ds_map_empty(argument2) or !is_real(argument3))
+if(argument_count != 5 or !is_real(argument0) or argument0 < 1 or !ds_exists(argument1, ds_type_list) or ds_list_empty(argument1) or !ds_exists(argument2, ds_type_map) or ds_map_empty(argument2) or !is_real(argument3) or argument4 == noone)
 {
     return noone;
 }
@@ -14,9 +12,10 @@ desired_fields_number = floor(argument0);
 items_refcodes = argument1;
 items_properties = argument2;
 images_location = argument3;
+item_type = argument4;
 
-var obstacle_refcode_to_area = ds_map_create();
-var viable_obstacle_refcodes = ds_list_create();
+var item_refcode_to_area = ds_map_create();
+var viable_item_refcodes = ds_list_create();
 for(var i = 0; i < ds_list_size(items_refcodes); ++i)
 {
     var refcode = ds_list_find_value(items_refcodes, i);
@@ -25,9 +24,9 @@ for(var i = 0; i < ds_list_size(items_refcodes); ++i)
     if(area <= desired_fields_number and area > 0)
     {
         var new_index = 0;
-        for(var j = 0; j < ds_list_size(viable_obstacle_refcodes); ++j)
+        for(var j = 0; j < ds_list_size(viable_item_refcodes); ++j)
         {                       
-            if (area <= ds_map_find_value(obstacle_refcode_to_area, ds_list_find_value(viable_obstacle_refcodes, j)))
+            if (area <= ds_map_find_value(item_refcode_to_area, ds_list_find_value(viable_item_refcodes, j)))
             {
                 new_index = j;
                 break;
@@ -38,12 +37,12 @@ for(var i = 0; i < ds_list_size(items_refcodes); ++i)
             }
         } 
         
-        ds_map_add(obstacle_refcode_to_area, refcode, area);   
-        ds_list_insert(viable_obstacle_refcodes, new_index, refcode);        
+        ds_map_add(item_refcode_to_area, refcode, area);   
+        ds_list_insert(viable_item_refcodes, new_index, refcode);        
     }
 }
 
-if(ds_map_empty(obstacle_refcode_to_area) or ds_list_empty(viable_obstacle_refcodes))
+if(ds_map_empty(item_refcode_to_area) or ds_list_empty(viable_item_refcodes))
 {
     return noone;
 }
@@ -53,23 +52,26 @@ with(obj_table)
     var filled_fields_number = 0;    
     while(filled_fields_number < desired_fields_number)
     {
-        var obstacle_index = irandom(ds_list_size(viable_obstacle_refcodes) - 1);        
-        if(ds_map_find_value(obstacle_refcode_to_area, ds_list_find_value(viable_obstacle_refcodes, obstacle_index)) + filled_fields_number > desired_fields_number)
+        var item_index = irandom(ds_list_size(viable_item_refcodes) - 1);        
+        if(ds_map_find_value(item_refcode_to_area, ds_list_find_value(viable_item_refcodes, item_index)) + filled_fields_number > desired_fields_number)
         {
             continue;
         }
         
-        var obstacle_position_x, obstacle_position_y;
-        var properties_array = ds_map_find_value(items_properties, ds_list_find_value(viable_obstacle_refcodes, obstacle_index));
+        var item_position_x, item_position_y;
+        var properties_array = ds_map_find_value(items_properties, ds_list_find_value(viable_item_refcodes, item_index));
         
         do
         {
-            obstacle_position_x = irandom(ds_grid_width(grid) - 1);
-            obstacle_position_y = irandom(ds_grid_height(grid) - 1);
+            item_position_x = irandom(ds_grid_width(grid) - 1);
+            item_position_y = irandom(ds_grid_height(grid) - 1);
         }
-        until(scr_check_fields_availability(grid, obstacle_position_x, obstacle_position_y, real(properties_array[OBSTACLE_WIDTH_INDEX]), real(properties_array[OBSTACLE_HEIGHT_INDEX])));    
-        show_debug_message("The field (" + string(obstacle_position_x) + ", " + string(obstacle_position_y) + ") will be used.");
-        with(instance_create(left_position + obstacle_position_x * cell_width, top_position + obstacle_position_y * cell_height, obj_ingredient))
+        until(scr_check_fields_availability(grid, item_position_x, item_position_y, real(properties_array[OBSTACLE_WIDTH_INDEX]), real(properties_array[OBSTACLE_HEIGHT_INDEX])));    
+
+        //var created_item = instance_create(left_position + item_position_x * field_width, top_position + item_position_y * field_height, if (images_location == images_ingredients) { return obj_ingredient;);
+        var created_item = instance_create(left_position + item_position_x * field_width, top_position + item_position_y * field_height, item_type);
+                
+        with(created_item)
         {
             name = properties_array[OBSTACLE_NAME_INDEX];
             refcode = properties_array[OBSTACLE_REFCODE_INDEX];
@@ -84,7 +86,7 @@ with(obj_table)
             height = properties_array[OBSTACLE_HEIGHT_INDEX];      
             depth = obj_table.depth - 1;
         }        
-        filled_fields_number += ds_map_find_value(obstacle_refcode_to_area, ds_list_find_value(viable_obstacle_refcodes, obstacle_index));
-        ds_grid_add_region(grid, obstacle_position_x, obstacle_position_y, obstacle_position_x + real(properties_array[OBSTACLE_WIDTH_INDEX]) - 1, obstacle_position_y + real(properties_array[OBSTACLE_HEIGHT_INDEX]) - 1, 1);
+        filled_fields_number += ds_map_find_value(item_refcode_to_area, ds_list_find_value(viable_item_refcodes, item_index));
+        ds_grid_add_region(grid, item_position_x, item_position_y, item_position_x + real(properties_array[OBSTACLE_WIDTH_INDEX]) - 1, item_position_y + real(properties_array[OBSTACLE_HEIGHT_INDEX]) - 1, 1);
     }
 }

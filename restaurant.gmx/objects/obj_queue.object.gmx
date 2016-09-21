@@ -25,9 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!instance_exists(obj_table) or instance_number(obj_table) != 1)
+            <string>scr_log("The queue creation have just started.");
+
+if(!instance_exists(obj_table) or instance_number(obj_table) != 1)
 {
-    show_debug_message("The queueu creation could not be finalized");
+    show_debug_message("The queueu creation could not be finalized, because there is no table!");
     return noone;   
 }
 
@@ -44,10 +46,12 @@ right_position = x - sprite_xoffset + sprite_width;
 top_position = y - sprite_yoffset;
 bottom_position = y - sprite_yoffset + sprite_height;
 
-width = right_position - left_position;
-height = bottom_position - top_position;
+width = right_position - left_position; // sprite_width?
+height = bottom_position - top_position; // sprite_height?
 
 scr_populate_queue();
+
+scr_log("The queue creation have just finished.");
 </string>
           </argument>
         </arguments>

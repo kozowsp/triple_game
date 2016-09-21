@@ -1,4 +1,4 @@
-// Populates the specified number of the board's fields with the obstacles
+// Populates the specified number of the table's fields with the obstacles
 
 var desired_fields_number;
 
@@ -65,7 +65,7 @@ with(obj_table)
         }
         until(scr_check_fields_availability(grid, obstacle_position_x, obstacle_position_y, real(properties_array[OBSTACLE_WIDTH_INDEX]), real(properties_array[OBSTACLE_HEIGHT_INDEX])));
         
-        with(instance_create(left_position + obstacle_position_x * cell_width, top_position + obstacle_position_y * cell_height, obj_obstacle))
+        with(instance_create(left_position + obstacle_position_x * field_width, top_position + obstacle_position_y * field_height, obj_obstacle))
         {
             name = properties_array[OBSTACLE_NAME_INDEX];
             refcode = properties_array[OBSTACLE_REFCODE_INDEX];

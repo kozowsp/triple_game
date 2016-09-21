@@ -81,7 +81,7 @@ if(!is_undefined(previous_center_position_x) and !is_undefined(previous_center_p
     
     if(squared_position_change &gt; squared_position_change_treshold)
     {
-        scr_highlight_board_cell(center_x, center_y);
+        scr_highlight_table_field(center_x, center_y);
     }
 }
 
