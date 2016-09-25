@@ -2,7 +2,6 @@
 
 with(obj_queue)
 {
-    desired_ingredient_width = width / slots_number;
     for(var i = 0; i < slots_number; ++i)
     {
         if(slots[i] != noone)
@@ -11,27 +10,27 @@ with(obj_queue)
             continue;
         }
         
-        show_debug_message("Slot " + string(i) + " equals noone. Skipping...");        
+        show_debug_message("Slot " + string(i) + " equals noone. The ingredient will be created...");        
         
-        var new_ingredient_index = irandom(ds_list_size(global.ingredient_refcodes) - 1);        
-        var properties_array = ds_map_find_value(global.ingredient_properties, ds_list_find_value(global.ingredient_refcodes, new_ingredient_index));
+        var ingredient_refcode_index = irandom(ds_list_size(global.ingredient_refcodes) - 1);        
+        var fetched_ingredient_properties = ds_map_find_value(global.ingredient_properties, ds_list_find_value(global.ingredient_refcodes, ingredient_refcode_index));
         
-        var new_ingredient = instance_create(left_position + i * desired_ingredient_width, top_position, obj_ingredient);
+        var new_ingredient = instance_create(slot_positions[i, 0], slot_positions[i, 1], obj_ingredient);
         slots[i] = new_ingredient;
         
         with(new_ingredient)
         {
-            name = properties_array[OBSTACLE_NAME_INDEX];
-            refcode = properties_array[OBSTACLE_REFCODE_INDEX];
-            sprite_index = scr_load_sprite(images_ingredients, properties_array[OBSTACLE_SPRITE_NAME_INDEX]);
+            name = fetched_ingredient_properties[OBSTACLE_NAME_INDEX];
+            refcode = fetched_ingredient_properties[OBSTACLE_REFCODE_INDEX];
+            sprite_index = scr_load_sprite(images_ingredients, fetched_ingredient_properties[OBSTACLE_SPRITE_NAME_INDEX]);
             moveable = true;
-            destroyable = properties_array[OBSTACLE_DESTROYABLE_INDEX];
-            mergeable = properties_array[OBSTACLE_MERGEABLE_INDEX];
-            cleanable = properties_array[OBSTACLE_CLEANABLE_INDEX];
-            complexity = properties_array[OBSTACLE_COMPLEXITY_INDEX];
+            destroyable = fetched_ingredient_properties[OBSTACLE_DESTROYABLE_INDEX];
+            mergeable = fetched_ingredient_properties[OBSTACLE_MERGEABLE_INDEX];
+            cleanable = fetched_ingredient_properties[OBSTACLE_CLEANABLE_INDEX];
+            complexity = fetched_ingredient_properties[OBSTACLE_COMPLEXITY_INDEX];
             selected = false;
-            width = properties_array[OBSTACLE_WIDTH_INDEX];
-            height = properties_array[OBSTACLE_HEIGHT_INDEX];      
+            width = fetched_ingredient_properties[OBSTACLE_WIDTH_INDEX];
+            height = fetched_ingredient_properties[OBSTACLE_HEIGHT_INDEX];      
             depth = obj_table.depth - 1;
         }                
     }

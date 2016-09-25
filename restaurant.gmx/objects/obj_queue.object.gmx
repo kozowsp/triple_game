@@ -36,11 +36,6 @@ if(!instance_exists(obj_table) or instance_number(obj_table) != 1)
 slots_number = 2;
 available_slots = slots_number;
 
-for(var i = 0; i &lt; slots_number; ++i)
-{
-    slots[i] = noone;
-}
-
 left_position = x - sprite_xoffset;
 right_position = x - sprite_xoffset + sprite_width;
 top_position = y - sprite_yoffset;
@@ -48,6 +43,15 @@ bottom_position = y - sprite_yoffset + sprite_height;
 
 width = right_position - left_position; // sprite_width?
 height = bottom_position - top_position; // sprite_height?
+
+desired_ingredient_width = width / slots_number;
+
+for(var i = 0; i &lt; slots_number; ++i)
+{
+    slots[i] = noone;
+    slot_positions[i, 0] = left_position + i * desired_ingredient_width
+    slot_positions[i, 1] = top_position    
+}
 
 scr_populate_queue();
 

@@ -25,9 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>selected = false;
+            <string>if (selected == false)
+{
+    return noone;
+}
 
-var will_be_on_table = false;
+selected = false;
+
+var move_to_table = false;
 var new_position_x = noone;
 var new_position_y = noone;
 
@@ -35,7 +40,7 @@ with(obj_table)
 {
     if(highlighted_field != noone)
     {
-        will_be_on_table = true;
+        move_to_table = true;
         
         with(highlighted_field)
         {
@@ -43,14 +48,19 @@ with(obj_table)
             new_position_y = y;        
             instance_destroy();
         }
-    }
+        
+        ds_grid_set(grid, floor(new_position_x - left_position) / floor(field_width), floor(new_position_y - top_position) / floor(field_height), 1);
+        
+        highlighted_field = noone;
+    } 
 }
 
-if(will_be_on_table == true)
+var item_id = id;
+
+if(move_to_table == true)
 {
     x = new_position_x;
     y = new_position_y;
-    var item_id = id;
     
     if(is_undefined(id))
     {
@@ -74,7 +84,26 @@ if(will_be_on_table == true)
         }
     }
     
+    moveable = false;
+    
     scr_populate_queue();
+}
+else // move to queue
+{    
+    with(obj_queue)
+    {
+        for(var i = 0; i &lt; slots_number; ++i)
+        {
+            if(slots[i] == item_id)
+            {
+                new_position_x = slot_positions[i, 0];
+                new_position_y = slot_positions[i, 1];                
+            }
+        }
+    }
+
+    x = new_position_x;
+    y = new_position_y;    
 }
 </string>
           </argument>
