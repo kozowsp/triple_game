@@ -1,6 +1,40 @@
-//name;refcode;sprite;moveable;destroyable;mergeable;cleanable;complexity;width;height
-bagietka;BAQ;it_baguette.png;1;1;1;0;0;1;1
-banan;BAN;it_banana.png;1;1;1;0;0;1;1
-lody bananowe;BIC;it_banana_ice_cream.png;1;1;1;0;1;1;1
+﻿//name;refcode;sprite;moveable;destroyable;mergeable;cleanable;complexity;width;height//
+bagietka;BAGUETTE;it_baguette.png;1;1;1;0;0;1;1
+banan;BANANA;it_banana.png;1;1;1;0;0;1;1
+lody bananowe;BANANA-IC;it_banana_ice_cream.png;1;1;1;0;1;1;1
+shejk bananowy;BANANA-SH;it_banana_shake.png;1;1;1;0;1;1;1
+duże frytki;CHIPS-BIG;it_big_chips.png;1;1;1;0;1;1;1
+duże frytki z keczupem;CHIPS-WK-BIG;it_big_chips_with_ketchup.png;1;1;1;0;1;1;1
+jagody;BLUEBERRY;it_blueberry.png;1;1;1;0;1;1;1
+lody jagodowe;BLUEBERRY-IC;it_blueberry_ice_cream.png;1;1;1;0;1;1;1
+shejk jagodowy;BLUEBERRY-SH;it_blueberry_shake.png;1;1;1;0;1;1;1
 chleb;BREAD;it_bread.png;1;1;1;0;1;1;1
+specjał szefa kuchni;CHEFS-SP;it_chefs_special.png;1;1;1;0;1;1;1
+frytki;CHIPS;it_chips.png;1;1;1;0;1;1;1
+frytki z keczupem;CHIPS-WK;it_chips_with_ketchup.png;1;1;1;0;1;1;1
+kotlet;CUTLET;it_cutlet.png;1;1;1;0;1;1;1
+mąka;FLOUR;it_flour.png;1;1;1;0;1;1;1
+czara z owocami;GOBLET-F;it_fruit_goblet.png;1;1;1;0;1;1;1
+sałatka owocowa;SALAD-F;it_fruit_salad.png;1;1;1;0;1;1;1
+hamburger;HAMBURGER;it_hamburger.png;1;1;1;0;1;1;1
+hot-dog;HOT-D;it_hot_dog.png;1;1;1;0;1;1;1
+keczup;KETCHUP;it_ketchup.png;1;1;1;0;1;1;1
+sałata;LETTUCE;it_lettuce.png;1;1;1;0;1;1;1
+long-dog;LONG-D;it_long_dog.png;1;1;1;0;1;1;1
+mięso;MEAT;it_meat.png;1;1;1;0;1;1;1
+mleko;MILK;it_milk.png;1;1;1;0;1;1;1
+racuchy;PANCAKES;it_pancakes.png;1;1;1;0;1;1;1
+placki ziemniaczane;POTATO-P;it_potato_pancakes.png;1;1;1;0;1;1;1
 ziemniaki;POTATOES;it_potatoes.png;1;1;1;0;1;1;1
+pudding;PUDDING;it_pudding.png;1;1;1;0;1;1;1
+tęczowy szejk;RAINBOW-SH;it_rainbow_shake.png;1;1;1;0;1;1;1
+stek;STEAK;it_steak.png;1;1;1;0;1;1;1
+truskawka;STRAWBERRY;it_strawberry.png;1;1;1;0;1;1;1
+lody truskawkowe;STRAWBERRY-IC;it_strawberry_ice_cream.png;1;1;1;0;1;1;1
+szejk truskawkowy;STRAWBERRY-SH;it_strawberry_shake.png;1;1;1;0;1;1;1
+pomidor;TOMATOE;it_tomatoe.png;1;1;1;0;1;1;1
+wegeszaszłyk;SHASHLIK-V;it_vege_shashlik.png;1;1;1;0;1;1;1
+sałatka warzywna;SALAD-V;it_vegetable_salad.png;1;1;1;0;1;1;1
+warzywa w tempurze;TEMPURA-V;it_vegetables_in_tempura.png;1;1;1;0;1;1;1
+
+

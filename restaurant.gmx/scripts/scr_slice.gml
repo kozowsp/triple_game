@@ -1,4 +1,4 @@
-// slice the input string and returns the list of substrings (empty string are also being considered)
+// slice the input string and returns the array of substrings (empty string are also being considered)
 // eg. the src_slice(";;", ";") call will return the list of three empty strings
 
 var text, separator; // arguments
