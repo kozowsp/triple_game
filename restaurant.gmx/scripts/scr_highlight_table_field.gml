@@ -1,23 +1,17 @@
 // highlight the table's field, which is covered by the selected item
 
-var center_x, center_y; // arguments
+var in_grid_position_x, in_grid_position_y; // arguments
 
 if(argument_count != 2 or !is_real(argument0) or !is_real(argument1))
 {
     return noone;
 }
 
-center_x = argument0;
-center_y = argument1; 
+in_grid_position_x = argument0;
+in_grid_position_y = argument1; 
 
 with(instance_find(obj_table, 0))
-{
-    var table_left_position = x - sprite_xoffset;
-    var table_top_position = y - sprite_yoffset;
-    
-    var table_position_x = floor(center_x - table_left_position) / floor(field_width);
-    var table_position_y = floor(center_y - table_top_position) / floor(field_height);
-    
+{ 
     if(highlighted_field != noone)
     {
         with(highlighted_field)
@@ -26,17 +20,17 @@ with(instance_find(obj_table, 0))
         }
     }    
         
-    if(center_x >= table_left_position and center_x <= table_left_position + sprite_width and center_y >= table_top_position and center_y <= table_top_position + sprite_height and ds_grid_get(grid, table_position_x, table_position_y) != 1)
+    if(in_grid_position_x >= 0 and in_grid_position_x <= cols - 1 and in_grid_position_y >= 0 and in_grid_position_y <= rows - 1 and ds_grid_get(grid, in_grid_position_x, in_grid_position_y) == 0)
     {
-        var new_x = table_left_position + field_width * int64((center_x - table_left_position) / field_width);
-        var new_y = table_top_position + field_height * int64((center_y - table_top_position) / field_height);    
+        var new_pos_x = left_position + field_width * in_grid_position_x;
+        var new_pos_y = top_position + field_height * in_grid_position_y;
 
-        highlighted_field = instance_create(new_x, new_y, obj_item);        
+        highlighted_field = instance_create(new_pos_x, new_pos_y, obj_item);        
                 
         with(highlighted_field)
         {
             sprite_index = scr_load_sprite(images_helpers, "it_covered.png");        
-            depth = obj_table.depth - 1;            
+            depth = DEPTH_PLACED_ITEM;       
         }
     } 
     else

@@ -31,7 +31,7 @@ with(obj_queue)
             selected = false;
             width = fetched_ingredient_properties[OBSTACLE_WIDTH_INDEX];
             height = fetched_ingredient_properties[OBSTACLE_HEIGHT_INDEX];      
-            depth = obj_table.depth - 1;
+            depth = DEPTH_PLACED_ITEM;
         }                
     }
 }

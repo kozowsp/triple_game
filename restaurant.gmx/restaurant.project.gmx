@@ -837,6 +837,8 @@
       <script>scripts\scr_highlight_table_field.gml</script>
       <script>scripts\scr_check_fields_availability.gml</script>
       <script>scripts\scr_populate_items.gml</script>
+      <script>scripts\scr_highlight_ingredient.gml</script>
+      <script>scripts\scr_stop_highlighting_items.gml</script>
     </scripts>
     <scripts name="Queue">
       <script>scripts\scr_init_queue.gml</script>
@@ -849,9 +851,12 @@
       <script>scripts\scr_init_items.gml</script>
       <script>scripts\scr_add_item.gml</script>
       <script>scripts\scr_parse_items.gml</script>
+      <script>scripts\scr_handle_movement.gml</script>
     </scripts>
     <scripts name="Recipes">
       <script>scripts\scr_parse_recipes.gml</script>
+      <script>scripts\scr_highlight_items.gml</script>
+      <script>scripts\scr_get_recipes.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -868,7 +873,10 @@
     <room>rooms\rm_gameplay</room>
     <room>rooms\rm_settings</room>
   </rooms>
-  <constants number="15">
+  <constants number="18">
+    <constant name="DEPTH_PICKED_ITEM">-2</constant>
+    <constant name="DEPTH_PLACED_ITEM">-1</constant>
+    <constant name="DEPTH_TABLE">0</constant>
     <constant name="OBSTACLE_HEIGHT_INDEX">9</constant>
     <constant name="OBSTACLE_WIDTH_INDEX">8</constant>
     <constant name="OBSTACLE_COMPLEXITY_INDEX">7</constant>

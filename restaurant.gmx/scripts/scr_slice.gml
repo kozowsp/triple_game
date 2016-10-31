@@ -34,11 +34,23 @@ var substrings_array_index = 0;
 var substring = "";
 var i;
 
+if(string_char_at(text, string_length(text)) == " ")
+{
+    text = string_delete(text, string_length(text), 1);
+}
+
 for(i = 1; i <= string_length(text); ++i)
 {
-    if(string_char_at(text, i) != separator)
+    var current_char = string_char_at(text, i);
+    
+    if(current_char == chr(13) or current_char == chr(10))
     {
-        substring = substring + string_char_at(text, i)
+        continue;
+    }
+    
+    if(current_char != separator)
+    {
+        substring = substring + current_char;
     }
     else
     {
@@ -48,6 +60,10 @@ for(i = 1; i <= string_length(text); ++i)
     }
 }
 
-ds_list_add(substrings, substring); // last char in the string is the saparator, so after it there is still one empty string
-substrings_array[substrings_array_index] = substring;
+if(substring != "" and substring != chr(10) and substring != chr(13) and substring != (chr(13) + chr(10)))
+{
+    ds_list_add(substrings, substring); // last char in the string is the saparator, so after it there is still one empty string
+    substrings_array[substrings_array_index] = substring;   
+}
+
 return substrings_array;

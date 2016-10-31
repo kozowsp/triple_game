@@ -29,9 +29,9 @@ if(position_x < 0 or position_y < 0 or position_x > grid_max_x_position or posit
 }
 
 var sum = ds_grid_get_sum(grid, position_x, position_y, end_position_x, end_position_y);
-if(sum != 0)
+if(sum == 0)
 {
-    return false;
+    return true;
 }
 
-return true;
+return false;

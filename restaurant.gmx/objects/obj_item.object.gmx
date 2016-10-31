@@ -77,11 +77,12 @@ center_y = y - sprite_yoffset + sprite_height / 2;
 if(!is_undefined(previous_center_position_x) and !is_undefined(previous_center_position_y))
 {
     var squared_position_change = (previous_center_position_x - center_x) * (previous_center_position_x - center_x) + (previous_center_position_y - center_y) * (previous_center_position_y - center_y);
-    var squared_position_change_treshold = 9;
+    var squared_position_change_treshold = 1;
     
     if(squared_position_change &gt; squared_position_change_treshold)
     {
-        scr_highlight_table_field(center_x, center_y);
+        scr_handle_movement(center_x, center_y);
+        //scr_highlight_table_field(center_x, center_y);
     }
 }
 
@@ -110,6 +111,8 @@ previous_center_position_y = center_y;
           <argument>
             <kind>1</kind>
             <string>// Test.
+
+depth = DEPTH_PLACED_ITEM;
 </string>
           </argument>
         </arguments>
@@ -133,6 +136,8 @@ previous_center_position_y = center_y;
           <argument>
             <kind>1</kind>
             <string>// Test.
+
+depth = DEPTH_PICKED_ITEM;
 </string>
           </argument>
         </arguments>

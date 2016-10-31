@@ -67,10 +67,10 @@ with(obj_table)
             item_position_y = irandom(ds_grid_height(grid) - 1);
         }
         until(scr_check_fields_availability(grid, item_position_x, item_position_y, real(properties_array[OBSTACLE_WIDTH_INDEX]), real(properties_array[OBSTACLE_HEIGHT_INDEX])));    
-
+        
         //var created_item = instance_create(left_position + item_position_x * field_width, top_position + item_position_y * field_height, if (images_location == images_ingredients) { return obj_ingredient;);
         var created_item = instance_create(left_position + item_position_x * field_width, top_position + item_position_y * field_height, item_type);
-                
+
         with(created_item)
         {
             name = properties_array[OBSTACLE_NAME_INDEX];
@@ -84,9 +84,9 @@ with(obj_table)
             selected = false;
             width = properties_array[OBSTACLE_WIDTH_INDEX];
             height = properties_array[OBSTACLE_HEIGHT_INDEX];      
-            depth = obj_table.depth - 1;
+            depth = DEPTH_PLACED_ITEM;
         }        
         filled_fields_number += ds_map_find_value(item_refcode_to_area, ds_list_find_value(viable_item_refcodes, item_index));
-        ds_grid_add_region(grid, item_position_x, item_position_y, item_position_x + real(properties_array[OBSTACLE_WIDTH_INDEX]) - 1, item_position_y + real(properties_array[OBSTACLE_HEIGHT_INDEX]) - 1, 1);
+        ds_grid_add_region(grid, item_position_x, item_position_y, item_position_x + real(properties_array[OBSTACLE_WIDTH_INDEX]) - 1, item_position_y + real(properties_array[OBSTACLE_HEIGHT_INDEX]) - 1, created_item);
     }
 }

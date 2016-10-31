@@ -38,6 +38,9 @@ right_position = left_position + sprite_width;
 bottom_position = top_position + sprite_height;
 
 highlighted_field = noone;
+highlighted_ingredients = ds_list_create();
+hovered_field_x = -1;
+hovered_field_y = -1;
 
 grid = ds_grid_create(cols, rows);
 ds_grid_clear(grid, 0);

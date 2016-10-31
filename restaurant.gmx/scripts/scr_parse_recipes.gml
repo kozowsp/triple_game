@@ -2,7 +2,7 @@
 
 var recipes_filepath, recipes_list; // arguments
 
-if(argument_count != 2 or !is_string(argument0) or !ds_exists(argument1, ds_type_map))
+if(argument_count != 2 or !is_string(argument0) or !ds_exists(argument1, ds_type_list))
 {   
     return noone;
 }
@@ -21,19 +21,37 @@ while(!file_text_eof(file))
         continue;
     } 
 
-    var sliced_recipe = scr_slice(fetched_line, "="); // array    
-    if(is_undefined(sliced_recipe) or sliced_recipe == noone or !is_array(sliced_recipe) or array_length_1d(sliced_recipe) != 2)
+    var recipe_items = scr_slice(fetched_line, ";"); // array    
+    var recipe_items_count = array_length_1d(recipe_items);
+    if(is_undefined(recipe_items) or recipe_items == noone or !is_array(recipe_items) or recipe_items_count < 3)
     {
         scr_log("The '" + fetched_line + "' line is not a parsable recipe!");
         continue;
     }
+
+    var correct_refcodes = true;
+    var missing_refcode = "";
+    for(var i = 0; i < recipe_items_count; i++)
+    {
+        var refcode = recipe_items[i];
+        var refcode_index = ds_list_find_index(global.ingredient_refcodes, string(refcode));
+        if(refcode_index == -1)
+        {
+            correct_refcodes = false;     
+            missing_refcode = refcode;  
+            break;
+        }
+    }
     
-    var ingredient_refcodes = scr_slice(sliced_recipe[0], "+");
-    var result_refcode = sliced_recipe[1];
+    if(correct_refcodes == false)
+    {
+        scr_log("At least '" + string(missing_refcode) + "' item from the recipe was not found on the refcodes list. The fetched line from the file: " + fetched_line + ".");
+        continue;
+    }
     
-    scr_log("The recipe was parsed successfully. Ingredients: " + string(ingredient_refcodes) + ", result: " + string(result_refcode) + ".");
+    scr_log("The recipe was parsed successfully. Items: " + string(recipe_items) + ".");
     
-    ds_map_add(recipes_list, ingredient_refcodes, result_refcode);
+    ds_list_add(recipes_list, recipe_items);
 }
 
 file_text_close(file);
